@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Concepts</title>
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --highlight-color: #f1c40f;
+        }
+
+        /* Base Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            color: var(--primary-color);
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        h2 {
+            color: var(--secondary-color);
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        /* Pseudo-elements */
+        p::first-letter {
+            font-size: 2em;
+            color: var(--highlight-color);
+        }
+
+        /* Pseudo-classes */
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: var(--primary-color);
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Flexbox */
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .grid-item {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animated {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #ffffff;
+            }
+
+            .grid-item {
+                background-color: #444;
+            }
+        }
+
+        /* Advanced Selector */
+        .grid-item:nth-child(odd) {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Advanced CSS Webpage</h1>
+    <h2>Welcome!</h2>
+    <p>This webpage demonstrates various <b>advanced CSS concepts</b> that enhance the design and functionality of
+        modern websites.</p>
+
+    <div class="flex-container">
+        <p>Flexbox is great for arranging elements.</p>
+        <button>Click Me</button>
+    </div>
+
+    <h2>Grid Layout</h2>
+    <div class="grid-container">
+        <div class="grid-item">Grid Item 1</div>
+        <div class="grid-item">Grid Item 2</div>
+        <div class="grid-item">Grid Item 3</div>
+    </div>
+
+    <p class="animated">This paragraph uses a fade-in animation.</p>
+</body>
+
+</html>
