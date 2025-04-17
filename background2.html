@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: linear-gradient(to top right, #0f2027, #203a43, #2c5364);
+        }
+
+        #grad1 {
+            height: 400px;
+            text-align: center;
+            margin: auto;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            position: relative;
+            padding-top: 150px;
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .star {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: white;
+            border-radius: 50%;
+            opacity: 0;
+            animation: twinkle 3s infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="grad1">
+        Welcome to Codingal
+    </div>
+    <div class="stars"></div>
+
+    <script>
+        function createStars() {
+            const starContainer = document.querySelector('.stars');
+            for (let i = 0; i < 50; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.animationDelay = `${Math.random() * 3}s`;
+                starContainer.appendChild(star);
+            }
+        }
+
+        createStars();
+    </script>
+
+</body>
+
+</html>
