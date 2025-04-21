@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDIA PAGE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .test-box {
+            width: 300px;
+            height: 200px;
+            background-color: lightblue;
+            border: 5px solid darkblue;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px gray;
+            padding: 20px;
+            margin: 20px auto;
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        .test-box:hover {
+            background-color: lightgreen;
+            transform: scale(1.1);
+        }
+
+        .text-style {
+            color: darkred;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px gray;
+        }
+
+        .button {
+            background-color: darkblue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: red;
+        }
+
+        .input-box {
+            padding: 10px;
+            width: 60%;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 2px solid darkblue;
+        }
+
+        .image {
+            width: 80%;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        .audio-video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>MEDIA PAGE 🎨🚀</h1>
+
+    <div class="test-box">
+        <p class="text-style">Hover over me!</p>
+    </div>
+
+    <button class="button" onclick="alert('You clicked the button!')">Click Me</button>
+
+    <input class="input-box" type="text" placeholder="Type something here...">
+
+    <div class="audio-video-container">
+        <h2>Image Display 📸</h2>
+        <img class="image" src="bg.jpg" alt="Sample Image">
+
+        <h2>Audio Playback 🎵</h2>
+        <audio controls>
+            <source src="name.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h2>Video Playback 🎥</h2>
+        <video controls width="80%">
+            <source src="Demo.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </div>
+
+</body>
+
+</html>
