@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Float Properties Example</title>
+    <style>
+        img.floatRight {
+            float: left;
+            margin: 10px;
+        }
+
+        img.floatLeft {
+            float: left;
+            margin: 10px;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        figure {
+            display: inline-block;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Using Float Properties</h2>
+
+    <p>In this example, the images will float to the left and right of the paragraph text, with proper margins and
+        spacing to ensure the layout remains visually appealing.</p>
+
+    <p>
+        <img class="floatRight" src="bg.jpg" alt="Tree - Float Right" style="width:100px;height:100px;">
+        <img class="floatLeft" src="bg.jpg" alt="Tree - Float Left" style="width:100px;height:100px;">
+        This text demonstrates how the `float` property works. The image on the right is floated to the right, while the
+        image on the left is floated to the left. Text wraps neatly around the images, and margins ensure that the text
+        does not overlap with the images. The float property is especially useful for creating attractive layouts in
+        combination with inline images or other content. Notice how the flow of the content adjusts to the placement of
+        the images.
+    </p>
+
+    <section>
+        <h3>Image Captions</h3>
+        <figure>
+            <img src="bg.jpg" alt="Tree Image" style="width:100px;height:100px;">
+            <figcaption>Figure 1: A tree on the left.</figcaption>
+        </figure>
+        <figure>
+            <img src="bg.jpg" alt="Tree Image" style="width:100px;height:100px;">
+            <figcaption>Figure 2: A tree on the right.</figcaption>
+        </figure>
+    </section>
+</body>
+
+</html>
