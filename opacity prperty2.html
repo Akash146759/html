@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Messages Game</title>
+    <style>
+        /* Style for the boxes */
+        .box {
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+            background-color: lightblue;
+            color: blue;
+            font-size: 20px;
+            border: 2px solid blue;
+            opacity: 0.2;
+            /* Initially, the message is hidden */
+            transition: opacity 0.5s;
+            /* Smooth transition */
+        }
+
+        /* Reveal the message on hover */
+        .box:hover {
+            opacity: 1;
+            /* Fully visible when hovered */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Discover the Hidden Messages!</h1>
+
+    <!-- Boxes with hidden messages -->
+    <div class="box">Hello, World!</div>
+    <div class="box">You found me!</div>
+    <div class="box">Keep searching!</div>
+    <div class="box">Good job!</div>
+
+    <p>Hover over the boxes to reveal their secrets!</p>
+</body>
+
+</html>

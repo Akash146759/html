@@ -1,21 +1,31 @@
-<form>
-    <fieldset>
-        <legend>Personal Information</legend>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
+<!DOCTYPE html>
+<html>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-    </fieldset>
+<head>
+    Form In HTML
+</head>
 
-    <fieldset>
-        <legend>Account Details</legend>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
+<body>
+    <h2>Registration Form</h2>
+    <form>
+        <fieldset>
+            <legend>User Personal Information</legend>
+            <label>Enter your name</label><br>
+            <input type="text" name="name"><br>
+            <label>Enter your mail</label><br>
+            <input type="email" name="name"><br>
+            <label>Enter your password</label><br>
+            <input type="password" name="name"><br>
+            <label> Enter your gender</label><br>
+            <input type='radio'>Male <br>
+            <input type='radio'>Female <br>
+            <input type='radio'>Other <br>
+            <label>Enter the address</label><br>
+            <textarea>Full Address</textarea><br>
+            <input type="submit" value="Register">
+            <input type="reset" value="Reset">
+        </fieldset>
+    </form>
+</body>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
-    </fieldset>
-
-    <button type="submit">Submit</button>
-</form>
+</html>
