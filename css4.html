@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scaling Example</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .box:hover {
+            transform: scale(1.5);
+            /* Scales the box by 1.5 times */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">Hover over me!</div>
+</body>
+
+</html>

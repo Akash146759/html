@@ -6,15 +6,27 @@
     <meta name="viewport" content="width=device-width">
     <title>replit</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        p {
+            color: blueviolet;
+        }
+
+        form {
+            color: violet;
+        }
+    </style>
 </head>
 
 <body>
+
+    <h1>This is for External CSS</h1>
     <fieldset>
-        <legend><b>Enter your Marks</b></legend>
+        <legend style="color : blue"><b>Enter your Marks</b></legend>
         <form action="/action_page.php" oninput="x.value=(parseInt(m1.value)+parseInt(m2.value)+parseInt(m3.value))/3">
-            <label>Name</label><br>
+            <label style="color : green">Name</label><br>
             <input type="text" id="name"><br><br>
-            <label>Enter Marks</label><br>
+            <label style="color : goldenrod">Enter Marks</label><br>
             <select name="Subject" id="subject">
                 <option value="Maths">Maths</option>
                 <option value="English">English</option>
@@ -36,6 +48,11 @@
             Average: <output name="x" for="m1 m2 m3"></output>
         </form>
     </fieldset>
+
+    <p>
+        <br>this is something!this is something!this is something!this is something!<br>
+        this is something!this is something!this is something!this is something!<br>
+    </p>
 </body>
 
 </html>
