@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Bootstrap Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 40px;
+        }
+
+        .hover-effect:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Bootstrap Interactive Page</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container text-center">
+        <h2 class="mt-4">Welcome to Our Interactive Bootstrap Page! 🚀</h2>
+        <p class="mb-4">Click buttons, explore modals, and enjoy the smooth interactions!</p>
+
+        <!-- Interactive Buttons -->
+        <button class="btn btn-success me-2" onclick="alert('You clicked the Success Button!')">Success Button</button>
+        <button class="btn btn-warning me-2" onclick="showModal()">Show Modal</button>
+
+        <!-- Bootstrap Modal -->
+        <div class="modal fade" id="customModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Hello from Bootstrap!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        Bootstrap makes webpages interactive and responsive. Try clicking the buttons!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Section -->
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card hover-effect">
+                    <img src="https://via.placeholder.com/200" class="card-img-top" alt="Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Bootstrap Cards</h5>
+                        <p class="card-text">Cards help organize content beautifully!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card hover-effect">
+                    <img src="https://via.placeholder.com/200" class="card-img-top" alt="Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Responsive Layout</h5>
+                        <p class="card-text">Bootstrap ensures your page looks great on all devices.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card hover-effect">
+                    <img src="https://via.placeholder.com/200" class="card-img-top" alt="Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Interactive Elements</h5>
+                        <p class="card-text">Hover and click to experience Bootstrap's magic!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function showModal() {
+            var modal = new bootstrap.Modal(document.getElementById('customModal'));
+            modal.show();
+        }
+    </script>
+
+</body>
+
+</html>
