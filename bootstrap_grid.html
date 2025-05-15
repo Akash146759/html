@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Grid Layouts</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Bootstrap Grid Examples</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="section-title">Bootstrap Grid Layout Examples</h2>
+
+        <!-- Three Equal Columns -->
+        <div class="row">
+            <div class="col-md-4 bg-primary text-white p-3">Column 1</div>
+            <div class="col-md-4 bg-success text-white p-3">Column 2</div>
+            <div class="col-md-4 bg-danger text-white p-3">Column 3</div>
+        </div>
+
+        <hr>
+
+        <!-- Two Unequal Columns -->
+        <div class="row">
+            <div class="col-md-8 bg-secondary text-white p-3">Big Column</div>
+            <div class="col-md-4 bg-warning text-dark p-3">Small Column</div>
+        </div>
+
+        <hr>
+
+        <!-- Stacked on Small Screens -->
+        <div class="row">
+            <div class="col-sm-12 col-md-6 bg-dark text-white p-3">Column 1</div>
+            <div class="col-sm-12 col-md-6 bg-info text-dark p-3">Column 2</div>
+        </div>
+
+        <hr>
+
+        <!-- Centered Column -->
+        <div class="row justify-content-center">
+            <div class="col-md-6 bg-light p-3 border text-center">Centered Column</div>
+        </div>
+
+        <hr>
+
+        <!-- Responsive Grid with Multiple Rows -->
+        <div class="row">
+            <div class="col-md-6 bg-primary text-white p-3">Row 1 - Left</div>
+            <div class="col-md-6 bg-secondary text-white p-3">Row 1 - Right</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 bg-success text-white p-3">Row 2 - Part 1</div>
+            <div class="col-md-4 bg-warning text-dark p-3">Row 2 - Part 2</div>
+            <div class="col-md-4 bg-danger text-white p-3">Row 2 - Part 3</div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
