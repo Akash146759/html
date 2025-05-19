@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drift Car Showcase</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Hover effect */
+        .card:hover {
+            transform: scale(1.05) rotate(1deg);
+            transition: 0.3s;
+        }
+
+        /* Neon glow effect */
+        .neon-text {
+            color: #ff007f;
+            text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
+        }
+
+        /* Drift effect */
+        @keyframes drift {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(10px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .drift-car {
+            animation: drift 2s infinite ease-in-out;
+        }
+
+        /* Smoke effect */
+        @keyframes smoke {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(1.5);
+            }
+        }
+
+        .smoke {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: smoke 3s infinite;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Fluid Container: Full-width banner -->
+    <div class="container-fluid bg-dark text-white text-center p-5">
+        <h1 class="neon-text">🔥 Drift Car Showcase 🔥</h1>
+        <p>Experience the thrill of drifting!</p>
+    </div>
+
+    <!-- Fixed Container: Car Slider -->
+    <div class="container mt-4">
+        <h2 class="text-center">Featured Drift Cars</h2>
+        <div id="carCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Nissan 240SX.jpg" class="d-block w-100" alt="Drift Car">
+                </div>
+                <div class="carousel-item">
+                    <img src="Toyota Supra.jpg" class="d-block w-100" alt="Drift Car">
+                </div>
+                <div class="carousel-item">
+                    <img src="Mazda RX-7.jpg" class="d-block w-100" alt="Drift Car">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Fixed Container: Car Details -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4 fade-in">
+                <div class="card drift-car">
+                    <img src="Nissan 240SX.jpg" class="card-img-top" alt="Drift Car">
+                    <div class="card-body">
+                        <h5 class="card-title">Nissan 240SX</h5>
+                        <p class="card-text">A classic drift car with rear-wheel drive and insane tuning potential!</p>
+                        <div class="smoke"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 fade-in">
+                <div class="card drift-car">
+                    <img src="Toyota Supra.jpg" class="card-img-top" alt="Drift Car">
+                    <div class="card-body">
+                        <h5 class="card-title">Toyota Supra</h5>
+                        <p class="card-text">Known for its powerful engine and excellent drift control.</p>
+                        <div class="smoke"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 fade-in">
+                <div class="card drift-car">
+                    <img src="Mazda RX-7.jpg" class="card-img-top" alt="Drift Car">
+                    <div class="card-body">
+                        <h5 class="card-title">Mazda RX-7</h5>
+                        <p class="card-text">Lightweight and agile—perfect for high-speed drifting.</p>
+                        <div class="smoke"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid bg-dark text-white text-center p-3 mt-4">
+        <p>🚀 Keep drifting and stay fast! 🏎️</p>
+    </div>
+
+    <script>
+        // Fade-in animation on scroll
+        document.addEventListener("scroll", function () {
+            document.querySelectorAll(".fade-in").forEach(element => {
+                if (element.getBoundingClientRect().top < window.innerHeight) {
+                    element.classList.add("visible");
+                }
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
