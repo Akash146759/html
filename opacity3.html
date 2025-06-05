@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Message Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .hidden-message {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            /* Smooth fade-in effect */
+        }
+
+        .reveal-btn {
+            background-color: blue;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .reveal-btn:hover+.hidden-message {
+            opacity: 1;
+            /* Reveal message on button hover */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Find the Hidden Message</h1>
+    <button class="reveal-btn">Hover to reveal</button>
+    <p class="hidden-message">You found the secret message!</p>
+</body>
+
+</html>

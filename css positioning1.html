@@ -1,91 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Example</title>
     <style>
-        div {
-            right: 30px;
-            border: 3px solid #73AD21;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
         }
 
-        div.absolute {
-            position: absolute;
-            left: 50px;
-            border: 3px solid blue;
-        }
-
-        div.relative {
+        .container {
             position: relative;
-            left: 100px;
-            border: 3px solid #73AD21;
+            width: 80%;
+            margin: auto;
+            border: 2px solid black;
+            padding: 20px;
         }
 
-        div.fixed {
-            position: fixed;
-            top: 0;
-            right: 20px;
-            width: 300px;
-            border: 3px solid #73AD21;
-        }
-
-        div.sticky {
-            position: sticky;
-            top: 1px;
-            left: 20px;
-            width: 100px;
-            border: 3px solid #73AD21;
-        }
-
-        .my-box {
-            position: relative;
-            /* Set the box's position to relative */
-            top: 20px;
-            /* Move the box 20px down from its normal position */
-            left: 30px;
-            /* Move the box 30px to the right from its normal position */
+        .box {
             width: 150px;
-            height: 100px;
-            background-color: lightblue;
-            border: 2px solid blue;
+            height: 50px;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .static {
+            position: static;
+            background-color: blue;
+        }
+
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-color: green;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 50px;
+            right: 30px;
+            background-color: red;
+        }
+
+        .fixed {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background-color: purple;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            background-color: orange;
         }
     </style>
 </head>
 
 <body>
-    <!-- change the position to show the diffference
-static
-relative
-fixed
-absolute
-sticky-->
-    <h2>POSITIONING</h2>
-    <div>
-        Div with no position property
+    <div class="container">
+        <div class="box static">Static</div>
+        <div class="box relative">Relative</div>
+        <div class="box absolute">Absolute</div>
+        <div class="box fixed">Fixed</div>
+        <div class="box sticky">Sticky</div>
     </div>
-    <div class="sticky">
-        Div with sticky position property
-    </div>
-    <div class="relative">
-        This div element has position: relative;
-        <div class="absolute">
-            Absolute class DIV
-        </div>
-    </div>
-    <div class="fixed">
-        Div with fixed position property
-    </div>
-    <div class="my-box">This is my box!</div>
-
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
+    <p>Scroll to see the sticky element in action.</p>
+    <p style="height: 1000px;">Keep scrolling down...</p>
 </body>
 
 </html>
