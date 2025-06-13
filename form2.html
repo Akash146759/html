@@ -2,57 +2,86 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>replit</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-
-    <style>
-        p {
-            color: blueviolet;
-        }
-
-        form {
-            color: violet;
-        }
-    </style>
+    <title>Complex Form</title>
 </head>
 
 <body>
+    <h2>Advanced User Registration Form</h2>
+    <form action="submit_form.html" method="post">
+        <!-- Personal Information -->
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
 
-    <h1>This is for External CSS</h1>
-    <fieldset>
-        <legend style="color : blue"><b>Enter your Marks</b></legend>
-        <form action="/action_page.php" oninput="x.value=(parseInt(m1.value)+parseInt(m2.value)+parseInt(m3.value))/3">
-            <label style="color : green">Name</label><br>
-            <input type="text" id="name"><br><br>
-            <label style="color : goldenrod">Enter Marks</label><br>
-            <select name="Subject" id="subject">
-                <option value="Maths">Maths</option>
-                <option value="English">English</option>
-                <option value="Science">Science</option>
-            </select>
-            <input type="number" id="m1" name="m1"><br><br>
-            <select name="Subject2" id="subject2">
-                <option value="Maths">Maths</option>
-                <option value="English">English</option>
-                <option value="Science">Science</option>
-            </select>
-            <input type="number" id="m2" name="m2"><br><br>
-            <select name="Subject3" id="subject3">
-                <option value="Maths">Maths</option>
-                <option value="English">English</option>
-                <option value="Science">Science</option>
-            </select>
-            <input type="number" id="m3" name="m3"><br><br>
-            Average: <output name="x" for="m1 m2 m3"></output>
-        </form>
-    </fieldset>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
 
-    <p>
-        <br>this is something!this is something!this is something!this is something!<br>
-        this is something!this is something!this is something!this is something!<br>
-    </p>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+        </fieldset>
+
+        <!-- Address Section -->
+        <fieldset>
+            <legend>Address</legend>
+            <label for="street">Street:</label>
+            <input type="text" id="street" name="street"><br><br>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city"><br><br>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state"><br><br>
+
+            <label for="zip">ZIP Code:</label>
+            <input type="text" id="zip" name="zip"><br><br>
+        </fieldset>
+
+        <!-- Preferences -->
+        <fieldset>
+            <legend>Preferences</legend>
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br><br>
+
+            <label>Choose Your Interests:</label><br>
+            <input type="checkbox" id="coding" name="interests" value="coding">
+            <label for="coding">Coding</label>
+            <input type="checkbox" id="sports" name="interests" value="sports">
+            <label for="sports">Sports</label>
+            <input type="checkbox" id="music" name="interests" value="music">
+            <label for="music">Music</label><br><br>
+
+            <label for="language">Preferred Language:</label><br>
+            <select id="language" name="language">
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="html_css">HTML & CSS</option>
+            </select><br><br>
+        </fieldset>
+
+        <!-- Upload Section -->
+        <fieldset>
+            <legend>Upload Documents</legend>
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume"><br><br>
+        </fieldset>
+
+        <!-- Additional Information -->
+        <fieldset>
+            <legend>Additional Information</legend>
+            <label for="bio">Short Bio:</label><br>
+            <textarea id="bio" name="bio" rows="4" cols="50"></textarea><br><br>
+        </fieldset>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
 </body>
 
 </html>
