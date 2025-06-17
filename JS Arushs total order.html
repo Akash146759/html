@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -26,7 +27,6 @@
     <br><br><br>
 
     Order:
-
     <select id="numbers">
         <option value="a single">A single</option>
         <option value="two">Two</option>
@@ -82,23 +82,21 @@
     </select>
 
     With size:
-
-    <select id="size">
-        <option value="0.001">Less than an atom</option>
-        <option value="0.01">Ultra small</option>
-        <option value="0.1">Very small</option>
-        <option value="1">Small</option>
-        <option value="1.2">Normal</option>
-        <option value="2.3">Big and 20 yucky broccolis</option>
-        <option value="7">Very big and 50 yucky broccolis</option>
-        <option value="200">Ultra big and 200 yucky broccolis</option>
-        <option value="1000">Planet-sized meal (You will explode after eating so much at one go!)</option>
+    <select id="sizes">
+        <option value="0.001" size="0.001">Less than an atom</option>
+        <option value="0.01" size="0.01">Ultra small</option>
+        <option value="0.1" size="0.1">Very small</option>
+        <option value="1" size="1">Small</option>
+        <option value="1.2" size="1.2">Normal</option>
+        <option value="2.3" size="2.3">Big and 20 yucky broccolis</option>
+        <option value="7" size="7">Very big and 50 yucky broccolis</option>
+        <option value="200" size="200">Ultra big and 200 yucky broccolis</option>
+        <option value="1000" size="1000">Planet-sized meal (You will explode after eating so much at one go!)</option>
     </select>
 
     <br><br>
 
     <button onclick="calculateTotal()">Order Now!</button>
-
     <p id="totalText">Your total is...</p>
 
 </body>
@@ -121,15 +119,13 @@
     }
 
     function calculatePriceSize(value) {
-        return value * 10; // Adjusted pricing logic for scaling
+        return value * value;
     }
 
     function calculateTotal() {
         let foodValue = document.getElementById("food").value;
-        let sizeValue = parseFloat(document.getElementById("size").value);
-
+        let sizeValue = parseFloat(document.getElementById("sizes").selectedOptions[0].getAttribute("size"));
         let total = calculatePriceFood(foodValue) * calculatePriceSize(sizeValue);
-
         changeTextById("totalText", "Your total is: " + total);
     }
 </script>
