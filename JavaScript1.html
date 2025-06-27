@@ -5,18 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Interactive Buttons</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+            font-family: Arial, sans-serif;
+        }
 
-    <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        p {
+            font-size: 20px;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .success {
+            background-color: green;
+            color: white;
+        }
+
+        .failure {
+            background-color: red;
+            color: white;
+        }
+    </style>
 </head>
 
-<body class="text-center" style="margin-top: 50px;">
+<body>
 
-    <p id="message">Hi Arush, click the button!</p>
+    <p id="message">Hi Ishaan, click the button!</p>
 
-    <!-- Bootstrap Buttons -->
-    <button class="btn btn-success btn-lg" onclick="a()">Success Button</button>
-    <button class="btn btn-danger btn-lg" onclick="b()">Failure Button</button>
+    <!-- Custom Buttons -->
+    <button class="success" onclick="a()">Success Button</button>
+    <button class="failure" onclick="b()">Failure Button</button>
 
     <script>
         function a() {

@@ -1,137 +1,48 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <style>
-        body {
-            background-color: black;
-            color: #ffffff;
-        }
-
-        select {
-            background-color: black;
-            color: #ffffff;
-        }
-    </style>
-</head>
-
 <body>
 
-    <h1>
-        <p id="toggleText">Insert yes/no</p>
-    </h1>
+    <h3>Check the console for the object output</h3>
 
-    <button onclick="toggleWebsite()" id="toggleButton">Toggle website yes/no</button>
+    <p id="text1">load this...</p>
+    <button onclick="displayTextById(person.testObject.join(' , '), 'text1')">UPDATE!!</button>
 
-    <br><br><br>
+    <p id="text2">load this too...</p>
 
-    Order:
+    <button onclick="displayTextById(person.hobbyBySkill.join(' , '), 'text2')">UPDATE!!</button>
 
-    <select id="numbers">
-        <option value="a single">A single</option>
-        <option value="two">Two</option>
-        <option value="three">Three</option>
-        <option value="pi(3.1415)">Pi (3.1415)</option>
-        <option value="four">Four</option>
-        <option value="five">Five</option>
-        <option value="six">Six</option>
-        <option value="seven">Seven</option>
-        <option value="eight">Eight</option>
-        <option value="nine">Nine</option>
-        <option value="10">10</option>
-        <option value="15">15</option>
-        <option value="20">20</option>
-        <option value="30">30</option>
-        <option value="50">50</option>
-        <option value="80">80</option>
-        <option value="100">100</option>
-        <option value="1000">1000</option>
-        <option value="1000000">1000000</option>
-        <option value="infinity">Infinity</option>
-        <option value="-1/12">-1/12</option>
-        <option value="3/5">3/5</option>
-        <option value="i">i</option>
-        <option value="-1">-1</option>
-        <option value="a few">A few</option>
-        <option value="a fair bit of">A fair bit of</option>
-        <option value="some">Some</option>
-        <option value="a lot of">A lot of</option>
-        <option value="a bunch of">A bunch of</option>
-        <option value="every single existence of">Every single existence of</option>
-        <option value="an order about">An order about</option>
-    </select>
+    <script>
+        var testObject = {
+            property1: "test",
+            property2: "1st object coded",
+            property3: "colour green/purple",
+            property4: "shiny crystal",
+            property5: "do-dec-a-hed-ron platonic",
+            property6: "has 6 properties"
+        };
 
-    <select id="food">
-        <option value="non-yucky broccoli">Non-yucky broccoli</option>
-        <option value="pizza">Pizza</option>
-        <option value="chocolate and sweets">Chocolate</option>
-        <option value="diabetes medicine pills">Diabetes medicine pills</option>
-        <option value="candy toothbrush (also edible)">Candy toothbrush (also edible)</option>
-        <option value="coffee">Coffee</option>
-        <option value="cupcake">Cupcake</option>
-        <option value="ice cream">Ice cream</option>
-        <option value="free candy">Free candy</option>
-        <option value="chocolate volcano cookies">Chocolate volcano cookies</option>
-        <option value="chocolate and butter sandwich">Chocolate and butter sandwich</option>
-        <option value="very cheesy burger">Very cheesy burger</option>
-        <option value="sugar and KitKat ball">Sugar and KitKat ball</option>
-        <option value="smashed subscribe button cake">Smashed subscribe button cake</option>
-        <option value="melted chocolate monster with candy teeth">Melted chocolate monster with candy teeth</option>
-        <option value="rainbow lollipop with chocolate coating">Rainbow lollipop with chocolate coating</option>
-        <option value="donuts">Donuts</option>
-    </select>
+        var person = {
+            name: "arush",
+            hobbies: ["art n craft", "math", "coding", "chess"],
+            age: 12,
+            hobbyBySkill: ["pen shading", "basic quantum experiments", "html n css n javascript", "~500 elo"]
+        };
 
-    With size:
+        console.log(
+            testObject.property1 + " " +
+            testObject.property2 + " " +
+            testObject.property3 + " " +
+            testObject.property4 + " " +
+            testObject.property5 + " " +
+            testObject.property6
+        );
 
-    <select id="size">
-        <option value="0.001">Less than an atom</option>
-        <option value="0.01">Ultra small</option>
-        <option value="0.1">Very small</option>
-        <option value="1">Small</option>
-        <option value="1.2">Normal</option>
-        <option value="2.3">Big and 20 yucky broccolis</option>
-        <option value="7">Very big and 50 yucky broccolis</option>
-        <option value="200">Ultra big and 200 yucky broccolis</option>
-        <option value="1000">Planet-sized meal (You will explode after eating so much at one go!)</option>
-    </select>
-
-    <br><br>
-
-    <button onclick="calculateTotal()">Order Now!</button>
-
-    <p id="totalText">Your total is...</p>
+        function displayTextById(text, id) {
+            document.getElementById(id).innerHTML = text;
+        }
+    </script>
 
 </body>
-
-<script>
-    var toggle = "yes";
-
-    function toggleWebsite() {
-        document.getElementById("toggleText").innerHTML = toggle;
-        toggle = (toggle === "no") ? "yes" : "no";
-        console.log(toggle);
-    }
-
-    function changeTextById(textId, toText) {
-        document.getElementById(textId).innerHTML = toText;
-    }
-
-    function calculatePriceFood(value) {
-        return (value === "diabetes medicine pills") ? 100 : 10000;
-    }
-
-    function calculatePriceSize(value) {
-        return value * 10; // Adjusted pricing logic for scaling
-    }
-
-    function calculateTotal() {
-        let foodValue = document.getElementById("food").value;
-        let sizeValue = parseFloat(document.getElementById("size").value);
-
-        let total = calculatePriceFood(foodValue) * calculatePriceSize(sizeValue);
-
-        changeTextById("totalText", "Your total is: " + total);
-    }
-</script>
 
 </html>

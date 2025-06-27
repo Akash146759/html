@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Favorite Animals</title>
+</head>
+
+<body>
+    <h2>Click to see my favorite animals!</h2>
+    <button onclick="showFavorites()">Show Animals</button>
+    <p id="output"></p>
+
+    <script>
+        let person = {
+            name: "Zara",
+            favoriteAnimals: ["Panda", "Dolphin", "Koala", "Parrot"]
+        };
+
+        function showFavorites() {
+            document.getElementById("output").innerText =
+                person.name + "'s favorite animals are: " + person.favoriteAnimals.join(" , ");
+        }
+    </script>
+</body>
+
+</html>
