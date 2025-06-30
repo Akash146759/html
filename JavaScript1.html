@@ -38,24 +38,36 @@
 
 <body>
 
-    <p id="message">Hi Ishaan, click the button!</p>
+    <p id="paragraph">Hi Ishaan, click the button!</p>
+    <p id="paragraph2">Hi Ishaan, click the button!</p>
 
     <!-- Custom Buttons -->
-    <button class="success" onclick="a()">Success Button</button>
-    <button class="failure" onclick="b()">Failure Button</button>
+    <button class="success" onclick="one()">Success Button</button>
+    <button class="failure" onclick="two()">Failure Button</button>
 
-    <script>
-        function a() {
-            document.getElementById("message").innerHTML = "Wow! You clicked, and something wonderful happened!";
-            document.title = "Success! 🎉";
-        }
+    <p id="calc"> Here you'll see the result!</p>
 
-        function b() {
-            document.getElementById("message").innerHTML = "Wow! You clicked, and nothing wonderful happened!";
-            document.title = "Oops, try again! 😅";
-        }
-    </script>
+    
 
 </body>
+
+<script>
+    function one() {
+        document.getElementById("paragraph").innerHTML = "Wow! You clicked, and something wonderful happened!";
+        document.title = "Success! 🎉";
+    }
+
+    function two() {
+        document.getElementById("paragraph2").innerHTML = "Wow! You clicked, and nothing wonderful happened!";
+        document.title = "Oops, try again! 😅";
+    }
+
+    var a = 10;
+    var b = 20;
+    var c = a + b;
+
+    document.getElementById("calc").innerHTML = "The total of the variables are : " + c
+
+</script>
 
 </html>
